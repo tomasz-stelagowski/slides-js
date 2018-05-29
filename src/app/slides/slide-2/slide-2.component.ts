@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './slide-2.component.html',
   styleUrls: ['./slide-2.component.scss']
 })
-export class Slide2Component implements OnInit {
+export class Slide2Component {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  code = 'function x() {\nconsole.log("Hello world!");\n}';
 }

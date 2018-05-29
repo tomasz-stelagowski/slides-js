@@ -7,11 +7,11 @@ const right = (fromState, toState) => +fromState < +toState;
 export const routerTransition = trigger('routerTransition', [
   transition(right, [
     query(':enter', style({ transform: 'translateX(100%)' })),
-    group([
+    sequence([
       sequence([
         query(':leave', [
           style({ transform: 'translateX(0%)' }),
-          animate('500ms linear',
+          animate('300ms linear',
             style({ transform: 'translateX(-100%)' }))
         ]),
         // query(':leave', [
@@ -23,7 +23,7 @@ export const routerTransition = trigger('routerTransition', [
       sequence([
         query(':enter', [
           style({ transform: 'translateX(100%)' }),
-          animate('500ms linear',
+          animate('300ms linear',
             style({ transform: 'translateX(0%)' })),
         ]),
         // query(':enter', [
@@ -36,18 +36,18 @@ export const routerTransition = trigger('routerTransition', [
   ]),
   transition(left, [
     query(':enter', style({ transform: 'translateX(-100%)' })),
-    group([
+    sequence([
       sequence([
         query(':leave', [
           style({ transform: 'translateX(0%)' }),
-          animate('500ms linear',
+          animate('300ms linear',
             style({ transform: 'translateX(100%)' }))
         ]),
       ]),
       sequence([
         query(':enter', [
           style({ transform: 'translateX(-100%)' }),
-          animate('500ms linear',
+          animate('300ms linear',
             style({ transform: 'translateX(0%)' })),
         ]),
       ])

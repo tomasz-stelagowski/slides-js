@@ -1,0 +1,15 @@
+<div class="d-flex flex-column" style="position: fixed; top: 0; left: 0; height: 100vh; width: 100%;">
+  <div class="row no-gutters h-100 text-left" style="flex: 1 1 1;">
+    <div class="col-6">
+      <div class="p-3 h-100 border-o-round rounded" style="background-color: #1e1e1e; box-sizing: border-box">
+        <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+      </div>
+    </div>
+    <div class="col-6">
+      <ng-container *ngFor="let snippet of snippets">
+          <!-- <mat-slider [(ngModel)]="fontSize" min="12" max="48" step="2"></mat-slider> -->
+      </ng-container>
+    </div>
+  </div>
+</div>
+
